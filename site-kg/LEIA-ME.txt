@@ -1,0 +1,60 @@
+CATALOGO KG LEVE GOURMET - VERSAO EM PASTA
+==========================================
+
+O QUE MUDOU
+-----------
+Antes: um unico arquivo HTML de 1,81 MB com tudo dentro dele.
+Agora: um index.html de 57 KB + as fotos e fontes como arquivos separados.
+
+Na pratica, para quem abre o site no celular:
+  - a primeira tela usa 95 KB (antes: 1,81 MB)
+  - as fotos chegam conforme a pessoa rola a pagina
+  - o celular baixa a foto pequena (400px) nos cards e a grande so onde precisa
+  - na SEGUNDA visita as fotos nem sao baixadas de novo: ficam no cache
+
+
+COMO PUBLICAR (Netlify - gratuito)
+----------------------------------
+1. Acesse:  app.netlify.com/drop
+2. Arraste a pasta "site-kg" INTEIRA para a area indicada.
+   (a pasta toda, nao os arquivos soltos)
+3. Em alguns segundos voce recebe um endereco tipo "algo.netlify.app".
+   Ja esta no ar, com HTTPS.
+
+Para usar seu proprio dominio:
+   Site settings > Domain management > Add a domain
+   Informe o dominio e siga as instrucoes de DNS que aparecerem.
+
+ATENCAO ao dominio: se ascensadigital.com.br ja tem outro site no ar,
+NAO aponte o dominio principal para ca sem antes conferir - voce derrubaria
+o site atual. O caminho seguro nesse caso e usar um subdominio, por exemplo
+catalogo.ascensadigital.com.br, apontando so ele para o Netlify.
+
+Alternativa equivalente: Cloudflare Pages (pages.cloudflare.com), mesmo
+processo de arrastar a pasta.
+
+
+PARA ATUALIZAR DEPOIS
+---------------------
+Arraste a pasta atualizada de novo no mesmo projeto do Netlify.
+Os nomes dos arquivos de imagem tem um codigo no final
+(ex: chocomelo-900-a1b2c3d4.webp). Isso e proposital: garante que uma foto
+trocada apareça na hora para todo mundo, sem ficar presa em cache antigo.
+
+
+CONFERIR SE ESTA TUDO CERTO
+---------------------------
+Abra o site publicado acrescentando ?diag=1 no final do endereco.
+Ex: https://seusite.com.br/?diag=1
+Aparece uma faixa escura no topo com o diagnostico (versao do arquivo,
+se esta dentro de iframe, tamanho da tela, imagens carregadas).
+Sem o ?diag=1 essa faixa nao existe - visitantes nunca a veem.
+
+
+O QUE TEM NA PASTA
+------------------
+index.html   a pagina (57 KB)
+images/      57 fotos em WebP, duas resolucoes cada
+fonts/       3 fontes (Montserrat, Playfair Display, Allura)
+_headers     regras de cache - o Netlify le sozinho, nao precisa mexer
+LEIA-ME.txt  este arquivo
