@@ -1,0 +1,32 @@
+VERSAO SIMPLES - UM ARQUIVO SO
+==============================
+
+Esta pasta tem UM unico arquivo de site: index.html.
+Tudo (fotos, fontes, codigo) esta dentro dele.
+
+POR QUE ESTA VERSAO
+-------------------
+Nao existe arquivo separado para se perder no envio.
+Se o index.html subiu, o site inteiro subiu. Nao tem como
+aparecer imagem quebrada por arquivo faltando.
+
+COMO PUBLICAR
+-------------
+1. Acesse app.netlify.com/drop
+2. Arraste a pasta "site-kg-simples" inteira
+3. Pronto
+
+CONFERIR
+--------
+Acrescente ?diag=1 no fim do endereco para ver o painel de
+diagnostico. Deve mostrar "imagens prontas: 42/42".
+
+TROCA JUSTA
+-----------
+Esta versao pesa 1,8 MB e carrega tudo de uma vez.
+A versao em pasta (site-kg) e bem mais rapida - 95 KB ate a
+primeira tela e as fotos ficam em cache entre visitas - mas
+depende de 63 arquivos chegarem inteiros ao servidor.
+
+Use esta aqui para o site ficar no ar hoje. A versao em pasta
+fica como melhoria para depois.
